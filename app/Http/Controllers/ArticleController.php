@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Http\Requests\ArticleRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -24,12 +25,37 @@ class ArticleController extends Controller
     {
         $article->fill($request->all());
         $originalImg = $request->image;
-        $filePath = $originalImg->store('public');
-        $article->image = str_replace('public/', '', $filePath);
+        $filePath = $originalImg->store('public/images/');
+        $article->image = str_replace('public/images/', '', $filePath);
         $article->user_id = $request->user()->id;
         $article->save();
         return redirect()->route('articles.index');
     }
 
-    
+    public function edit(Article $article)
+    {
+        return view('articles.edit', ['article' => $article]);    
+    }
+
+    public function update(ArticleRequest $request, Article $article)
+    {
+        $article->fill($request->all());
+        $originalImg = $request->image;
+        $filePath = $originalImg->store('public/images/');
+        $article->image = str_replace('public/images/', '', $filePath);
+        $article->user_id = $request->user()->id;
+        $article->save();
+        return redirect()->route('articles.index');
+    }
+
+    public function destroy(Article $article)
+    {
+        $article->delete();
+        return redirect()->route('articles.index');
+    }
+
+    public function show(Article $article)
+    {
+        return view('articles.show', ['article' => $article]);
+    } 
 }
