@@ -7,6 +7,7 @@
   <div class="container">
     @foreach($articles as $article)
       <div class="card mt-3">
+        <img src="{{ asset('storage/'.$article->image) }}" width="300px" height="300px">
         <div class="card-body d-flex flex-row">
           <i class="fas fa-user-circle fa-3x mr-1"></i>
           <div>
@@ -22,11 +23,12 @@
           <h3 class="h4 card-title">
             {{ $article->title }}
           </h3>
+          <hr>
           <div class="card-text">
             {!! nl2br(e( $article->body )) !!}
           </div>
         </div>
       </div>
-    @endforeach {{--この行を追加--}}
+    @endforeach
   </div>
 @endsection
