@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand navbar-dark blue-gradient">
+<nav class="navbar navbar-expand-lg navbar-dark black" style="">
 
-  <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>Book</a>
+  <a class="navbar-brand" href="/"><strong>Book</strong></a>
 
   <ul class="navbar-nav ml-auto">
 
@@ -17,8 +17,8 @@
     @endguest
       
     @auth
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿する</a>
+    <li class="nav-item" style="font-size: 12px; line-height: 25px;">
+      <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i></a>
     </li>
     @endauth
     

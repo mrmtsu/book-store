@@ -7,8 +7,10 @@
   <div class="container">
     @include('users.user')
     @include('users.tabs', ['hasArticles' => false, 'hasLikes' => true])
-    @foreach($articles as $article)
-      @include('articles.card')
-    @endforeach
+    <div class="card-list" style="margin-top: 50px; display: flex; flex-wrap: wrap;">
+      @foreach($articles as $article)
+        @include('articles.card')
+      @endforeach
+    </div>
   </div>
 @endsection

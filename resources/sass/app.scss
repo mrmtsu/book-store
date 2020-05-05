@@ -1,1 +1,104 @@
-//
+
+.card {
+  margin: 10px;
+  width: 350px;
+}
+
+
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Arial","Helvetica","Lucida Grande","Berthold Baskerville Book",clean,Hiragino Kaku Gothic Pro,sans-serif;
+	font-size: 100%;
+}
+p,dl,dt,dd,blockquote,cite,q,address {
+    font-size: 100%;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+}
+ol,ul {
+	list-style: none;
+}
+img {
+border-style: none;
+}
+
+/************************************************
+*    clear                                        *
+************************************************/
+/*div:after {
+    content:".";
+    display: block;
+    height:0px;
+    clear:both;
+    visibility:hidden;
+}
+*/
+/* exlude IE6 \*/
+* html .clearfix { height: 1% }
+.clearfix {display:block;}
+/* end IE6 */
+
+
+
+/************************************************
+*    Layout                                      *
+************************************************/
+body {
+    color: #000;
+    line-height: 1.6;
+    background-color: #FFF;
+    font:62.5%/1.7 'Arial','Helvetica Neue','Helvetica', 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック', sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+/* ------------------------------
+header
+------------------------------ */
+
+#header {
+	width: 990px;
+	height: 26px;
+	margin: 55px auto 0px;
+	padding: 0 230px 0px 30px;	
+}
+#header h1 {
+	width: 93px;
+	height: 26px;
+	margin: 0px 0px 0px 0px;
+	float: left;
+}
+#header h1 a{
+	display: block;
+	text-indent: -9999px;
+	line-height: 0;
+	width: 93px;
+	height: 26px;
+	background: url(../images/h1.gif) 0 0 no-repeat;
+	overflow: hidden;
+}
+#header h1 a:hover {
+	background-position: 0;
+}
+
+
+
+.view {
+  background: url("https://mdbootstrap.com/img/Photos/Others/img (51).jpg")no-repeat center center;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .view {
+      overflow: visible;
+      margin-top: -56px;
+  }
+}
+.navbar {
+  z-index: 1;
+}

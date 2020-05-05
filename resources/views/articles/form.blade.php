@@ -16,3 +16,10 @@
 </div>
 
 <input type="file" name="image" value="{{ $article->image ?? old('image') }}">
+
+  <!-- <div class="file-field">
+    <div class="btn btn-pink btn-rounded btn-sm float-left">
+      <input type="file" name="image" value="{{ $article->image ?? old('image') }}" id="image-file" style="display: none;">
+      <label for="image-file"><span><i class="fas fa-upload mr-2" aria-hidden="true" id="image-file"></i>Choose file</span></label>
+    </div>
+  </div> -->
