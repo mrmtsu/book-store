@@ -96,7 +96,7 @@ return [
             'host' => '127.0.0.1',
             'port' => '5432',
             'database' => 'circle_test',
-            'username' => 'root',
+            'username' => 'default',
             'password' => '',
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
