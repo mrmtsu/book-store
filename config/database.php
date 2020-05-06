@@ -93,7 +93,7 @@ return [
 
         'circle_testing' => [
             'driver' => 'pgsql',
-            'host' => 'postgres',
+            'host' => 'localhost',
             'port' => '5432',
             'database' => 'circle_test',
             'username' => 'root',
