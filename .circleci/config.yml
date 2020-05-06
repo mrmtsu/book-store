@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.3-node-browsers
-      - image: circleci/postgres:11.6-postgis
+      - image: circleci/postgres:11.6
     environment:
       - DB_CONNECTION: circle_testing
     working_directory: ~/ci-demo
@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
           name: Update apt-get
-          command: sudo apt-get update
+          command: sudo apt-get update  && sudo apt-get -y install libpq-dev
       - run:
           name: Docker php extensions install
           command: sudo docker-php-ext-install pdo_pgsql
