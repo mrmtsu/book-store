@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.3-node-browsers
-      - image: circleci/postgres:11.6
+      - image: circleci/postgres:11.6-postgis
     environment:
       - DB_CONNECTION: circle_testing
     working_directory: ~/ci-demo
@@ -14,7 +14,7 @@ jobs:
           command: sudo apt-get update
       - run:
           name: Docker php extensions install
-          command: sudo docker-php-ext-install pdo_mysql
+          command: sudo docker-php-ext-install pdo_pgsql
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "composer.json" }}
