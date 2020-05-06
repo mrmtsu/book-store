@@ -91,6 +91,21 @@ return [
             'prefix_indexes' => true,
         ],
 
+        'circle_testing' => [
+            'driver' => 'pgsql',
+            'host' => 'postgres',
+            'port' => '5432',
+            'database' => 'circle_test',
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+        ],
+
     ],
 
     /*
