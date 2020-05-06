@@ -93,11 +93,11 @@ return [
 
         'circle_testing' => [
             'driver' => 'pgsql',
-            'host' => '127.0.0.1',
+            'host' => 'postgres',
             'port' => '5432',
             'database' => 'circle_test',
-            'username' => 'root',
-            'password' => '',
+            'username' => 'default',
+            'password' => 'secret',
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
