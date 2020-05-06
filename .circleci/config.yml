@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7.3-node-browsers
+      - image: circleci/postgres:9.6-alpine
+    environment:
+      - ENV POSTGRES_DB: circle_testing
+    working_directory: ~/ci-demo
+    steps:    
+      - checkout
+      - run:
+          name: Update apt-get
+          command: sudo apt-get update  && sudo apt-get -y install libpq-dev
+      - run:
+          name: Docker php extensions install
+          command: sudo docker-php-ext-install pdo_pgsql
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "composer.json" }}
+            - v1-dependencies-
+      - run:
+          name: Install PHP libraries
+          command: composer install -n --prefer-dist
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+
+      - run:
+          name: Run PHPUnit
+          command: vendor/bin/phpunit
