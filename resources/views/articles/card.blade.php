@@ -124,8 +124,8 @@
                 </div>
                 <div class="carousel-item">
                   <img class="d-block w-100"
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(24).jpg"
-                    alt="Second slide">
+                    src="{{ asset('storage/images'.$article->image) }}"
+                    alt="Third slide">
                 </div>
                 <div class="carousel-item">
                   <img class="d-block w-100"
