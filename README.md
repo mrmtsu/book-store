@@ -1,6 +1,12 @@
 # TITLE
 Book-Review
 
+# INGENUITY
+- AWSへのデプロイ、httpsドメイン取得
+- Dockerを用いた開発
+- Vue.jsを用いたいいね・フォローの非同期化
+- Googleアカウントでのユーザー新規登録・ログイン
+
 # OVERVIEW
 - 新規登録、ログイン
 - 画像投稿
@@ -24,12 +30,6 @@ Book-Review
   <br>
   <br>
   <br>
-- 投稿一覧画面
-  ![image](https://user-images.githubusercontent.com/60598010/77854360-d66bce80-7224-11ea-8614-3d2ff1d65a05.png)
-  <br>
-  <br>
-  <br>
-  <br>
 - タグ一覧画面
   ![image](https://user-images.githubusercontent.com/60598010/81406534-b9f07980-9174-11ea-949e-091b7cf13b92.png)
   <br>
@@ -38,12 +38,6 @@ Book-Review
   <br>
 - マイページ
   ![image](https://user-images.githubusercontent.com/60598010/81406657-f02df900-9174-11ea-9399-e57a7707ac20.png)
-
-# INGENUITY
-- AWSへのデプロイ、httpsドメイン取得
-- Dockerを用いた開発
-- Vue.jsを用いたいいね・フォローの非同期化
-- Googleアカウントでのユーザー新規登録・ログイン
 
 # 今後実装したい機能
 - コメント機能
