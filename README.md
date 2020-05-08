@@ -63,9 +63,9 @@ Book-Review
 ## articlesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|text||
-|body|text||
-|image|string||
+|title|text|null: false|
+|body|text|null: false|
+|image|string|null: false|
 |user|references|foreign_key: true|
 ### Association
 - belongs_to :user
