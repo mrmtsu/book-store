@@ -2,7 +2,9 @@
 Book-Review
 
 # INGENUITY
-- AWSへのデプロイ、httpsドメイン取得
+- AWSへのデプロイ
+- 独自ドメイン取得しRoute53との関連付け
+- SSL化
 - Dockerを用いた開発
 - Vue.jsを用いたいいね・フォローの非同期化
 - Googleアカウントでのユーザー新規登録・ログイン
