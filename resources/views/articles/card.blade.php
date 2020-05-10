@@ -1,5 +1,11 @@
 <div class="card mt-3" style="width: 350px;">
-  <button type="button" class="btn" data-toggle="modal" data-target="#modalQuickView" style="margin:0;padding:0;"><img src="{{ asset('storage/images'.$article->image) }}" style="width:350px; height:380px;"></button>
+  <button type="button" class="btn" data-toggle="modal" data-target="#modalQuickView" style="margin:0;padding:0;">
+    @if(!empty($article->image))
+      <img src="{{ asset('storage/images'.$article->image) }}" style="width:350px; height:380px;">
+    @else
+      <div class='image-wrapper'><img class='book-image' src="{{ asset('images/dummy.png') }}"></div>
+    @endif
+  </button>
   
   <div class="card-body d-flex flex-row">
     <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
