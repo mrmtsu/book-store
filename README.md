@@ -6,6 +6,7 @@ Book-Review
 - 独自ドメイン取得しRoute53との関連付け
 - SSL化
 - Dockerを用いた開発
+- CircleCIを用いた自動テスト化
 - Vue.jsを用いたいいね・フォローの非同期化
 - Googleアカウントでのユーザー新規登録・ログイン
 
